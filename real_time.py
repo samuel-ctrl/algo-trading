@@ -8,7 +8,7 @@ fig = mpf.figure(style="charles",figsize=(7,8))
 ax1 = fig.add_subplot(1,1,1)
 
 def animate(ival):
-	idf = pd.read_csv("data_tut.csv", index_col=0)
+	idf = pd.read_csv("data.csv", index_col=0)
 	idf['minute'] = pd.to_datetime(idf['minute'], format="%m/%d/%Y %H:%M")
 	idf.set_index('minute', inplace=True)
 
